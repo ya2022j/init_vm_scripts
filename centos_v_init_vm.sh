@@ -94,7 +94,7 @@ docker  version;
 
 
 
-
+yum install -y net-tools
 
 
 clear
