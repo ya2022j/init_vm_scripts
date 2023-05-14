@@ -140,9 +140,9 @@ openssl version;
 
 yum install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gcc make libffi-devel;
 yum install wget;
-wget https://www.python.org/ftp/python/3.8.1/Python-3.8.1.tgz;
-tar -zxvf Python-3.8.1.tgz;
-cd Python-3.8.1;
+wget https://www.python.org/ftp/python/3.10.8/Python-3.10.8.tgz;
+tar -zxvf Python-3.10.8.tgz;
+cd Python-3.10.8;
 # 配置安装位置
 ./configure --prefix=/usr/local/python3 --with-openssl=/usr/local/openssl;
 # 安装之后要修改yum 的配置
@@ -182,10 +182,10 @@ make && make install;
 
 
  #添加python3的软链接
-ln -s /usr/local/python3/bin/python3.8 /usr/bin/python3 ;
+ln -s /usr/local/python3/bin/python3.10 /usr/bin/python3 ;
 
 #添加 pip3 的软链接
-ln -s /usr/local/python3/bin/pip3.8 /usr/bin/pip3;
+ln -s /usr/local/python3/bin/pip3.10 /usr/bin/pip3;
 
 pip3  install --upgrade pip -i http://pypi.douban.com/simple --trusted-host pypi.douban.com
 pip3  install docker-compose -i http://pypi.douban.com/simple --trusted-host pypi.douban.com
