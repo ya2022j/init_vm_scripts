@@ -109,24 +109,40 @@ rm -rf /usr/bin/pip3;
 whereis python ;
 
 
-wget https://www.openssl.org/source/openssl-1.1.1a.tar.gz;
-tar -zxvf openssl-1.1.1a.tar.gz;
-cd openssl-1.1.1a;
+# wget https://www.openssl.org/source/openssl-1.1.1a.tar.gz;
+# tar -zxvf openssl-1.1.1a.tar.gz;
+# cd openssl-1.1.1a;
 
-./config --prefix=/usr/local/openssl no-zlib;
-make  && make install;
+# ./config --prefix=/usr/local/openssl no-zlib;
+# make  && make install;
 
 
 
-ln -s /usr/local/openssl/include/openssl /usr/include/openssl;
-ln -s /usr/local/openssl/lib/libssl.so.1.1 /usr/local/lib64/libssl.so;
-ln -s /usr/local/openssl/bin/openssl /usr/bin/openssl;
+# ln -s /usr/local/openssl/include/openssl /usr/include/openssl;
+# ln -s /usr/local/openssl/lib/libssl.so.1.1 /usr/local/lib64/libssl.so;
+# ln -s /usr/local/openssl/bin/openssl /usr/bin/openssl;
 
-echo "/usr/local/openssl/lib" >> /etc/ld.so.conf;
+# echo "/usr/local/openssl/lib" >> /etc/ld.so.conf;
 
-ldconfig -v;
-openssl version;
+# ldconfig -v;
+# openssl version;
 
+cd /usr/local
+
+
+ wget https://www.openssl.org/source/openssl-1.1.1s.tar.gz
+
+tar -xzvf  openssl-1.1.1s.tar.gz
+
+cd openssl-1.1.1s
+yum install gcc
+./config --prefix=/usr/local/openssl
+
+make && make install 
+
+rm -rf /usr/bin/openssl 
+
+ln -s /usr/local/openssl/bin/openssl /usr/bin/openssl
 
 
 yum install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gcc make libffi-devel;
