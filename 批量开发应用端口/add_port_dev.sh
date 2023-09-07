@@ -3,7 +3,7 @@
 systemctl restart firewalld;
 sudo firewall-cmd --add-service=http --permanent;
 sudo firewall-cmd --add-port=80/tcp --permanent; # nginx
-sudo firewall-cmd --add-port=8001/tcp --permanent;
+sudo firewall-cmd --add-port=8001/tcp --permanent; redisinsight
 sudo firewall-cmd --add-port=8080/tcp --permanent; # vue gin 
 sudo firewall-cmd --add-port=8000/tcp --permanent;
 sudo firewall-cmd --add-port=443/tcp --permanent;
