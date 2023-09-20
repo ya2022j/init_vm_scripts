@@ -87,7 +87,7 @@ yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/d
 
 
 yum list docker-ce --showduplicates | sort -r;
-yum -y install docker-ce-18.03.1.ce;
+yum -y install docker-ce;
 systemctl start docker;
 systemctl enable docker;
 docker  version;
